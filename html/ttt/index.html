@@ -3,31 +3,25 @@
 <link rel = "stylesheet" href="style.css">
 </head>
 <body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-	$(document).ready(function(){
-		$("td").click(function(){
-			$(this).click(function(){
-				$(this).text("X");});});
-	</script>
+	<script src="play.js"></script>
 	<?php if (isset($_POST['name'])):?>
-	<h1> <?php $name = $_POST['name']; date_default_timezone_set('American/New_York'); 
-$date = date('Y-m-d'); echo "Hello $name, $date";?>
+	<h1> <?php $name = $_POST['name']; date_default_timezone_set('American/New_York'); $date = date('Y-m-d'); echo "Hello $name, $date";?>
 	</h1>
+	<div id = "winner"></div>
 	<table id = 'board'><tr>
-			<td id = 0></td>
-			<td id = 1></td>
-			<td id = 2></td>
+			<td id = "0" class ="cell" > </td>
+			<td id = "1" class ="cell" ></td>
+			<td id = "2" class ="cell" ></td>
 		</tr>
 		<tr>
-			<td id = 3></td>
-			<td id = 4></td>
-			<td id = 5></td>
+			<td id = "3" class ="cell" ></td>
+			<td id = "4" class ="cell" ></td>
+			<td id = "5" class ="cell" ></td>
 		</tr>
 		<tr>
-			<td id = 6 ></td>
-			<td id = 7></td>
-			<td id = 8></td>
+			<td id = "6" class ="cell" ></td>
+			<td id = "7" class ="cell" ></td>
+			<td id = "8" class ="cell" ></td>
 		</tr>
 	</table>
 	<?php else: ?> 

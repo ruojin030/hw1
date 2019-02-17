@@ -1,11 +1,17 @@
-var board = ['0','0','0','0','0','0','0','0'];
+var board =[' ',' ',' ',' ',' ',' ',' ',' ',' '];
 var winner = document.getElementById("winner");
+
 function setWinner(winner){
     winner.insertAdjacentHTML('afterend',winner);
 }
 
 function cellClick(id){
-    if(board[id] == 0){
+    if(board[id] == ''){
         document.getElementById(id).innerHTML="X";
+        board[id] = 'X';
+        var myRequest = new XMLHttpRequest();
+        myRequest.open("POST", "play1.js", true);
+        var grid = {grid:board};
+        myRequest.send(grid);
     }
 }

@@ -6,5 +6,5 @@ function setWinner(winner){
 var cell = document.getElementsByClassName("cell");
 cell.addEventListener("click",cellClick(this));
 function cellClick(){
-    this.html("X")
+    this.innerHTML = "X";
 }

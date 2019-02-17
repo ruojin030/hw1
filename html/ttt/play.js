@@ -4,5 +4,5 @@ function setWinner(winner){
 }
 
 function cellClick(id){
-    document.getElementById(id).innerHTML("X")
+    document.getElementById(id).innerHTML="X";
 }

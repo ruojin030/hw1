@@ -1,0 +1,42 @@
+<html>
+<head>
+<link rel = "stylesheet" href="style.css">
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("td").click(function(){
+			$(this).click(function(){
+				$(this).text("X");});});
+	</script>
+	<?php if (isset($_POST['name'])):?>
+	<h1> <?php $name = $_POST['name']; date_default_timezone_set('American/New_York'); 
+$date = date('Y-m-d'); echo "Hello $name, $date";?>
+	</h1>
+	<table id = 'board'><tr>
+			<td id = 0></td>
+			<td id = 1></td>
+			<td id = 2></td>
+		</tr>
+		<tr>
+			<td id = 3></td>
+			<td id = 4></td>
+			<td id = 5></td>
+		</tr>
+		<tr>
+			<td id = 6 ></td>
+			<td id = 7></td>
+			<td id = 8></td>
+		</tr>
+	</table>
+	<?php else: ?> 
+	<form action = "/ttt/" method = "post">
+	<label for="name">Name:</label>
+	 <input type = "text" name = "name" id = "name">
+	<button type= "submit"> submit </button>
+	<!input type ="hidden" name="form_submitted" value ="1">
+        </form>
+	<?php endif; ?>
+</body>
+</html>

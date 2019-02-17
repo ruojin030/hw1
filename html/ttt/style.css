@@ -1,0 +1,30 @@
+body {
+background-color:light-red;
+}
+form {
+color:pink;
+}
+h1{
+color: gray;
+    
+}
+table {
+  width:180px;
+  border-collapse: collapse;
+}
+
+td {
+  width: 60px;
+  border: 2px solid #222;
+}
+
+td::after {
+  content: "";
+  display: block;
+  margin-top: 100%;
+}
+
+td {
+  border: 3px solid #222;
+}
+

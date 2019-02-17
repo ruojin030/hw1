@@ -12,7 +12,6 @@ function cellClick(id){
         console.log(board);
         var myRequest = new XMLHttpRequest();
         myRequest.open("POST", "play1.js", true);
-        var grid = {grid:board};
-        myRequest.send(grid);
+        myRequest.send({"grid":board});
     }
 }

@@ -3,7 +3,6 @@ function setWinner(winner){
     winner.insertAdjacentHTML('afterend',winner);
 }
 
-var cell = document.getElementsByClassName("cell");
-cell.addEventListener("click",function(c){
-    cell.innerHTML = "X";
-});
+function cellClick(id){
+    document.getElementById(id).innerHTML("X")
+}

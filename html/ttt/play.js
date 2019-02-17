@@ -6,7 +6,7 @@ function setWinner(winner){
 }
 
 function cellClick(id){
-    if(board[id] == ''){
+    if(board[id] == ' '){
         document.getElementById(id).innerHTML="X";
         board[id] = 'X';
         var myRequest = new XMLHttpRequest();

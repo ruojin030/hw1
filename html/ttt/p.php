@@ -1,7 +1,6 @@
 <?php
     $json= file_get_contents('php://input');
-    //echo $json;
-    $grid = json_decode($json);
+    $grid = $json["grid"];
     echo $grid;
     //$grid['8'] = "O";
     //$myjson -> grid = $grid;

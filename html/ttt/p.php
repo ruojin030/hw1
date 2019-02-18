@@ -1,7 +1,7 @@
 <?php
     $json= file_get_contents('php://input');
     //echo $json;
-    //echo $grid;  
+    //echo $grid;
     $grid['0'] = "O";
     $grid['1'] = " ";
     $grid['2'] = " ";

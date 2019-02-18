@@ -25,11 +25,13 @@ function cellClick(id){
                 console.log(myRequest.responseText);
                 var result =JSON.parse( myRequest.responseText);
                 grid = result.grid;
-                for(var i = 0; i<8;i++){
+                for(var i = 0; i<9;i++){
                     board[i] = grid[i];
                     document.getElementById(i).innerHTML = grid[i];
                 }
-
+                if(result.winner != " "){
+                    setWinner(result.winner);
+                }
             }
         }
     }

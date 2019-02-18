@@ -24,7 +24,7 @@ function cellClick(id){
                 console.log("success");
                 console.log(myRequest.responseText);
                 var result =JSON.parse( myRequest.responseText);
-                grid = JSON.parse(result.grid);
+                grid = result.grid;
                 for(var i = 0; i<8;i++){
                     board[i] = grid[i];
                     document.getElementById(i).innerHTML = grid[i];

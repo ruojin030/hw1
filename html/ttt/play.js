@@ -23,9 +23,12 @@ function cellClick(id){
             if (this.readyState ==4 && this.status ==200){
                 console.log("success");
                 console.log(myRequest.responseText);
-                var result = myRequest.responseText;
-                console.log(result.grid);
-
+                var result =JSON.parse( myRequest.responseText);
+                grid = JSON.parse(result.grid);
+                for(var i = 0; i<8;i++){
+                    board[i] = grid[i];
+                    document.getElementById(i).innerHTML = grid[i];
+                }
 
             }
         }

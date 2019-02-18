@@ -18,7 +18,7 @@ function cellClick(id){
         var myRequest = new XMLHttpRequest();
         myRequest.open("POST", "p.php", true);
         myRequest.setRequestHeader("Content-type", "application/json");
-        myRequest.send(JSON.stringify({"grid":grid}));
+        myRequest.send({"grid":grid});
         myRequest.onreadystatechange = function(){
             if (this.readyState ==4 && this.status ==200){
                 console.log("success");

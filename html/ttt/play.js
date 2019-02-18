@@ -22,8 +22,9 @@ function cellClick(id){
         myRequest.onreadystatechange = function(){
             if (this.readyState ==4 && this.status ==200){
                 console.log("success");
-                console.log(myRequest.responseText[0]);
+                console.log(myRequest.responseText);
                 var result = myRequest.responseText;
+                console.log(result.grid);
 
 
             }

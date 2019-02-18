@@ -6,7 +6,7 @@ var grid = {0:" ", 1:" ", 2:" ",
 var winner = document.getElementById("winner");
 
 function setWinner(winner){
-    winner.insertAdjacentHTML('afterend',winner);
+    document.getElementById("winner").innerHTML = winner;
 }
 
 function cellClick(id){
@@ -29,10 +29,11 @@ function cellClick(id){
                     board[i] = grid[i];
                     document.getElementById(i).innerHTML = grid[i];
                 }
-                if(result.winner != " "){
+               console.log(result.winner);
+	      if(result.winner!= " "){
                     setWinner(result.winner);
-                }
             }
+}
         }
     }
 }
